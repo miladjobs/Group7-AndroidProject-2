@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_about_us"
             app:destination="@id/about_us" />
+        <action
+            android:id="@+id/action_nav_home_to_layout_file_detail"
+            app:destination="@id/layout_file_detail" />
     </fragment>
 
     <fragment
@@ -22,6 +25,16 @@
         tools:layout="@layout/fragment_about_us" >
         <action
             android:id="@+id/action_about_us_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/layout_file_detail"
+        android:name="ir.iust.group7_androidproject_2.ui.file_detail.FileDetailFragment"
+        android:label="File Detail"
+        tools:layout="@layout/fragment_file_detail">
+        <action
+            android:id="@+id/action_layout_file_detail_to_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
 
