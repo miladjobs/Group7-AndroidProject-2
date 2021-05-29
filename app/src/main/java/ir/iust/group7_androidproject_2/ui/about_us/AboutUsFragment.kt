@@ -1,4 +1,4 @@
-package ir.iust.group7_androidproject_2.ui.slideshow
+package ir.iust.group7_androidproject_2.ui.about_us
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import ir.iust.group7_androidproject_2.R
 
-class SlideshowFragment : Fragment() {
+class AboutUsFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var aboutUsViewModel: AboutUsViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
-                ViewModelProvider(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
+        aboutUsViewModel =
+                ViewModelProvider(this).get(AboutUsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_about_us, container, false)
+        val textView: TextView = root.findViewById(R.id.text_about_us)
+        aboutUsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
