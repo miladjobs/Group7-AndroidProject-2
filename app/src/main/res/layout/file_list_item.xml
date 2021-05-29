@@ -15,7 +15,7 @@
         >
 
         <ImageView
-            android:id="@+id/file_image"
+            android:id="@+id/file_list_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="6dp"
@@ -26,7 +26,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/file_name"
+        android:id="@+id/file_list_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="File Name"
@@ -56,7 +56,7 @@
             android:layout_marginStart="32dp" />
 
         <TextView
-            android:id="@+id/file_downloads_count"
+            android:id="@+id/file_list_downloads_count"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
