@@ -17,10 +17,10 @@
         <ImageView
             android:id="@+id/file_list_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="180dp"
             android:padding="6dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             app:srcCompat="@drawable/round_circle_foreground" />
 
     </FrameLayout>

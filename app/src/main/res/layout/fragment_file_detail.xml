@@ -17,7 +17,8 @@
         android:layout_weight="0.3"
         android:text="File Details"
         android:textColor="#36ebe8"
-        android:textSize="50sp"
+        android:textSize="30sp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +36,14 @@
 
         <ImageView
             android:id="@+id/file_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="5dp"
             android:adjustViewBounds="true"
             android:contentDescription="image of file"
             android:padding="6dp"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             android:src="@drawable/round_circle_foreground" />
 
     </FrameLayout>
