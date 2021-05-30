@@ -13,9 +13,9 @@ class FileViewModel(private val fileRepository: FileRepository): ViewModel() {
     fun addFile(file: File) = fileRepository.addFile(file)
 
     fun initializeData(){
-        val file1 = File(name ="Book", downloadsCount = 10, description = "Mathematics", size = 200.0, image_path = R.drawable.home)
-        val file2 = File(name ="Music", downloadsCount = 5, description = "Shajarian", size = 20.0, image_path = R.drawable.home)
-        val file3 = File(name ="Film", downloadsCount = 3, description = "The Final Destination", size = 2000.2, image_path = R.drawable.home)
+        val file1 = File(name ="Book", downloadsCount = 10, description = "Mathematics", size = 200.0, image_path = R.drawable.book)
+        val file2 = File(name ="Music", downloadsCount = 5, description = "Shajarian", size = 20.0, image_path = R.drawable.music)
+        val file3 = File(name ="Film", downloadsCount = 3, description = "The Final Destination", size = 2000.2, image_path = R.drawable.film)
 
         this.addFile(file1)
         this.addFile(file2)
