@@ -18,7 +18,6 @@ import ir.iust.group7_androidproject_2.utils.DataInjector
 
 class FileDetailFragment: Fragment() {
     private var file_id: Int = -1
-    private var param2: String? = null
     private lateinit var btnBack: Button
     private lateinit var fileImage: ImageView
     private lateinit var fileName: TextView
@@ -30,7 +29,6 @@ class FileDetailFragment: Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
             file_id = it.getInt("file_id")
-            param2 = it.getString("param2")
         }
     }
 
@@ -70,15 +68,5 @@ class FileDetailFragment: Fragment() {
         return view
     }
 
-    companion object{
-
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) = FileDetailFragment().apply {
-            arguments = Bundle().apply {
-                putString("file_id", param1)
-                putString("param2", param2)
-            }
-        }
-    }
 
 }
