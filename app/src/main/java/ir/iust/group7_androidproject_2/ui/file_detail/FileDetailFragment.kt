@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import ir.iust.group7_androidproject_2.R
 import ir.iust.group7_androidproject_2.data.File
 import ir.iust.group7_androidproject_2.utils.DataInjector
-import ir.iust.group7_androidproject_2.utils.DownloadImage
 
 
 class FileDetailFragment: Fragment() {
@@ -49,9 +48,9 @@ class FileDetailFragment: Fragment() {
         val file: File = viewModel.getFile(file_id)
         fileName.text = file.name
         fileDescription.text = file.description
-        fileSize.text = file.size.toString()
+        fileSize.text = """${file.size} KB"""
         fileDownloadsCount.text = file.downloadsCount.toString()
-        DownloadImage(fileImage).execute(file.image_path)
+        fileImage.setImageResource(file.image_path)
         return view
     }
 

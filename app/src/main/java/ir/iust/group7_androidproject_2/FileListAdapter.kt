@@ -4,12 +4,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ir.iust.group7_androidproject_2.data.File
-import ir.iust.group7_androidproject_2.utils.DownloadImage
 
 class FileListAdapter(private var fileList: List<File>, private val onItemClicked: (Int)->Unit): RecyclerView.Adapter<FileListAdapter.ViewHolder>() {
 
@@ -35,7 +33,7 @@ class FileListAdapter(private var fileList: List<File>, private val onItemClicke
         val file: File = fileList[position]
         holder.fileName.text = file.name
         holder.fileDownloadsCount.text = file.downloadsCount.toString()
-        DownloadImage(holder.fileImage).execute(file.image_path)
+        holder.fileImage.setImageResource(file.image_path)
         holder.itemView.setOnClickListener{
             onItemClicked(position)
         }
